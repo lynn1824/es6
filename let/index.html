@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>let块级作用域</title>
+    <script type="text/javascript" src="../lib/let/let.js"></script>
 </head>
 <body>
-    <h1>Hello world!</h1>
+    <h1 id="test">Hello world!</h1>
 </body>
+    <script type="text/javascript">
+        console.log(a);
+        console.log(obj.name);
+        var hTag = document.getElementById('test');
+        hTag.innerHTML = '姓名:' + obj.name + ' 性别:' + obj.sex;
+        hTag.innerHTML = arr[3]();
+    </script>
 </html>
