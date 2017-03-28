@@ -2,5 +2,3 @@
 node_modules
 # 忽略.babelrc
 .babelrc
-# 忽略.idea/
-.idea
