@@ -102,21 +102,41 @@
 // }
 
 {
-    function Person() {
-        this.a = 'world!!';
-    }
-
-    Person.prototype.say = function () {
-        console.log('hi' + ' ' + this.a);
-    }
-
-    var obj = {
-        a: 'wworld!!ßå'
-    };
-    Object.setPrototypeOf(obj, Person.prototype);
-    obj.say();
+    // function Person() {
+    //     this.a = 'world!!';
+    // }
+    //
+    // Person.prototype.say = function () {
+    //     console.log('hi' + ' ' + this.a);
+    // }
+    //
+    // var obj = {
+    //     a: 'wworld!!ßå'
+    // };
+    // Object.setPrototypeOf(obj, Person.prototype);
+    // obj.say();
 
     // console.log(Object.getPrototypeOf(obj));
     // var obj = new Person();
     // obj.say();
+}
+
+{
+    function Person() {
+        var a = 10;
+        var b = 20;
+        this.say = function () {
+            return a + b;
+        }
+    }
+
+    Person.prototype.hello = function() {
+        console.log('hahaha');
+    }
+
+    var obj = {};
+    Person.apply(obj);
+    Object.setPrototypeOf(obj, Person.prototype);
+    console.log(obj.say());
+    obj.hello();
 }

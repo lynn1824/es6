@@ -24,7 +24,7 @@
     }
 
     // 获取标签与值
-    for(let [key, value] of s.entries()) {
+    for(let [key, value] of s.entries()) {~
         console.log(`${key} : ${value}`);
     }
 
